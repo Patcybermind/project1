@@ -12,21 +12,3 @@ RUN apk update && \
             bsd-compat-headers \
             newlib-arm-none-eabi \
             gcc-arm-none-eabi
-
-# Raspberry Pi Pico SDK
-ARG SDK_PATH=/usr/share/pico_sdk
-RUN git clone --depth 1 --branch 1.5.1 https://github.com/raspberrypi/pico-sdk.git $SDK_PATH \
-    && cd $SDK_PATH \
-    && git submodule update --init
-
-ENV PICO_SDK_PATH=$SDK_PATH
-
-# Picotool installation
-RUN git clone --depth 1 --branch 1.1.2 https://github.com/raspberrypi/picotool.git /home/picotool \
-    && cd /home/picotool \
-    && mkdir build \
-    && cd /home/picotool/build \
-    && cmake .. \
-    && make \
-    && cp /home/picotool/build/picotool /bin/picotool \
-    && rm -rf /home/picotool
