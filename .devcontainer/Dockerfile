@@ -25,7 +25,7 @@ ENV PICO_SDK_PATH=$SDK_PATH
 RUN git clone --depth 1 --branch 1.1.2 https://github.com/raspberrypi/picotool.git /home/picotool \
     && cd /home/picotool \
     && mkdir build \
-    && cd build \
+    && cd /home/picotool/build \
     && cmake .. \
     && make \
     && cp /home/picotool/build/picotool /bin/picotool \
