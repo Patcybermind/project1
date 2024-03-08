@@ -13,8 +13,8 @@ main(void)
 
     while (1) {
         led_ctrl(1);    // turn LED on
-        sleep_ms(250);
+        sleep_ms(50);
         led_ctrl(0);    // turn LED off
-        sleep_ms(250);
+        sleep_ms(2000);
     }
 }
