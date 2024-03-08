@@ -1,0 +1,3 @@
+/workspaces/project1/out/build/linux-default/pioasm/CMakeFiles/pioasm.dir
+/workspaces/project1/out/build/linux-default/pioasm/CMakeFiles/edit_cache.dir
+/workspaces/project1/out/build/linux-default/pioasm/CMakeFiles/rebuild_cache.dir
